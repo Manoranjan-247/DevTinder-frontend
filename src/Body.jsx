@@ -5,7 +5,7 @@ import Navbar from './commonComponents/Navbar'
 const Body = () => {
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <Outlet />
     </>
   )
