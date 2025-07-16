@@ -23,7 +23,7 @@ const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     try {
       e.preventDefault();
       if (isSignup) {
@@ -34,10 +34,10 @@ const Login = () => {
           email: formData.email,
           password: formData.password,
         });
-        const email = formData.email;
+        const emailId = formData.email;
         const password = formData.password;
         // Call login API
-        axios.post("http://localhost:7777/login", { email, password })
+        axios.post("http://localhost:7777/login", { emailId, password },{withCredentials: true})
       }
     } catch (error) {
       console.log(error);
